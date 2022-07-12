@@ -1,4 +1,6 @@
-Hello there!
+_He's a poet, he's a picker<br>
+He's a prophet, he's a pusher<br>
+He's a walkin' contradiction—<br>
+Partly truth and partly fiction!_
 
-It's just another random github respiratory created by some random person!
-Have a nice rest of your day!
+**Have a nice rest of your day!**
