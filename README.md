@@ -1,3 +1,4 @@
-# Hello_World
+Hello there!
 
-Just another github respiratory created by some stupid who has no idea what he is doing, LOL!!
+It's just another random github respiratory created by some random person!
+Have a nice rest of your day!
