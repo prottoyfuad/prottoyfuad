@@ -1,3 +1,4 @@
+
 # Copyright (c) 2010 Aldo Cortesi
 # Copyright (c) 2010, 2014 dequis
 # Copyright (c) 2012 Randall Ma
@@ -35,6 +36,18 @@ from libqtile.utils import guess_terminal
 mod = "mod4" 
 terminal = guess_terminal() 
 
+@lazy.function
+def minimizeAllWindows(qtile):
+    for win in qtile.current_group.windows:
+        if hasattr(win, "toggle_minimize") :
+            win.toggle_minimize()
+
+@lazy.function
+def maximizeAllWindows(qtile):
+    for win in qtile.current_group.windows:
+        if hasattr(win, "toggle_maximize") :
+            win.toggle_maximize()
+
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -67,7 +80,10 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod], "m", lazy.window.toggle_maximize(), desc="Toggle maximize"),  
+    Key([mod], "Up", lazy.window.toggle_maximize(), desc="Toggle maximize"),  
+    Key([mod, "control"], "Up", maximizeAllWindows(), desc="Toggle maximize all"),  
+    Key([mod], "Down", lazy.window.toggle_minimize(), desc="Toggle minimize"), 
+    Key([mod, "control"], "Down", minimizeAllWindows(), desc="Toggle minimize all"),  
     Key([mod], "z", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "c", lazy.spawn("com.google.Chrome"), desc="Launch Chrome"),
     Key([mod], "e", lazy.spawn("nautilus"), desc="Launch Nautilus"),
@@ -141,7 +157,13 @@ layouts = [
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    layout.Tile(border_width=3),
+    layout.Tile(add_after_last=True,
+                border_focus ='#ff00ff',
+                border_normal='#888888',
+                border_width=2,
+                margin=[3,3,3,3],
+                ratio=0.65
+                ),
     # layout.VerticalTile(border_width=3),
     # layout.TreeTab(),
     # layout.Zoomy(),
