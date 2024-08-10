@@ -1,0 +1,13 @@
+!! to view changes without quitting WM, run this-
+!! xrdb -merge ~/.Xresources
+
+!! for Qtile
+
+! HiDPI scaling
+Xft.dpi:130
+
+! Cursor
+! Xcursor.theme: /usr/share/icons/ArcMidnight-cursors
+Xcursor.size:24
+
+!! end Qtile

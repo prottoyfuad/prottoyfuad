@@ -37,13 +37,13 @@ mod = "mod4"
 terminal = guess_terminal() 
 
 @lazy.function
-def minimizeAllWindows(qtile):
+def minimize_all_windows(qtile):
     for win in qtile.current_group.windows:
         if hasattr(win, "toggle_minimize") :
             win.toggle_minimize()
 
 @lazy.function
-def maximizeAllWindows(qtile):
+def maximize_all_windows(qtile):
     for win in qtile.current_group.windows:
         if hasattr(win, "toggle_maximize") :
             win.toggle_maximize()
@@ -81,9 +81,9 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Up", lazy.window.toggle_maximize(), desc="Toggle maximize"),  
-    Key([mod, "control"], "Up", maximizeAllWindows(), desc="Toggle maximize all"),  
+    Key([mod, "control"], "Up", maximize_all_windows(), desc="Toggle maximize all"),  
     Key([mod], "Down", lazy.window.toggle_minimize(), desc="Toggle minimize"), 
-    Key([mod, "control"], "Down", minimizeAllWindows(), desc="Toggle minimize all"),  
+    Key([mod, "control"], "Down", minimize_all_windows(), desc="Toggle minimize all"),  
     Key([mod], "z", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "c", lazy.spawn("com.google.Chrome"), desc="Launch Chrome"),
     Key([mod], "e", lazy.spawn("nautilus"), desc="Launch Nautilus"),

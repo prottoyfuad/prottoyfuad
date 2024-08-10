@@ -5,6 +5,7 @@ volumeicon &
 
 picom &
 nitrogen --restore &
+ibus start &
 
 sleep 3
 deluge &

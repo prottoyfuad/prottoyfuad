@@ -1,40 +1,5 @@
 
-[env]
-TERM = "alacritty"
-
-[font]
-builtin_box_drawing = true
-size = 16
-
-[font.normal]
-family = "monospace"
-style = "Regular"
-
-[scrolling]
-history = 10000
-multiplier = 3
-
-[window]
-decorations = "none"
-dynamic_title = true
-# gtk_theme_variant = "dark"
-opacity = 0.95
-startup_mode = "Maximized"
-title = "Alacritty"
-
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
-
-[window.padding]
-x = 0
-y = 0
-
-[cursor.style]
-blinking = "Off"
-shape = "Underline"
-
-[colors.bright]
+[dracula.bright]
 black = "#6272a4"
 blue = "#d6acff"
 cyan = "#a4ffff"
@@ -44,27 +9,27 @@ red = "#ff6e6e"
 white = "#ffffff"
 yellow = "#ffffa5"
 
-[colors.cursor]
+[dracula.cursor]
 cursor = "CellForeground"
 text = "CellBackground"
 
-[colors.footer_bar]
+[dracula.footer_bar]
 background = "#282a36"
 foreground = "#f8f8f2"
 
-[colors.hints.end]
+[dracula.hints.end]
 background = "#282a36"
 foreground = "#f1fa8c"
 
-[colors.hints.start]
+[dracula.hints.start]
 background = "#f1fa8c"
 foreground = "#282a36"
 
-[colors.line_indicator]
+[dracula.line_indicator]
 background = "None"
 foreground = "None"
 
-[colors.normal]
+[dracula.normal]
 black = "#21222c"
 blue = "#bd93f9"
 cyan = "#8be9fd"
@@ -74,24 +39,24 @@ red = "#ff5555"
 white = "#f8f8f2"
 yellow = "#f1fa8c"
 
-[colors.primary]
+[dracula.primary]
 background = "#282a36"
 bright_foreground = "#ffffff"
 foreground = "#f8f8f2"
 
-[colors.search.focused_match]
+[dracula.search.focused_match]
 background = "#ffb86c"
 foreground = "#44475a"
 
-[colors.search.matches]
+[dracula.search.matches]
 background = "#50fa7b"
 foreground = "#44475a"
 
-[colors.selection]
+[dracula.selection]
 background = "#44475a"
 text = "CellForeground"
 
-[colors.vi_mode_cursor]
+[dracula.vi_mode_cursor]
 cursor = "CellForeground"
 text = "CellBackground"
 

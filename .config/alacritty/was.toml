@@ -1,0 +1,65 @@
+
+[env]
+TERM = "alacritty"
+
+[font]
+builtin_box_drawing = true
+size = 16
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "none"
+dynamic_title = true
+# gtk_theme_variant = "dark"
+opacity = 0.99
+startup_mode = "Maximized"
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 0
+y = 0
+
+[cursor.style]
+blinking = "Off"
+shape = "Underline"
+
+[colors.bright]
+black = "#cdc6df"
+blue = "#657b83"
+cyan = "#586e75"
+green = "#93a1a1"
+magenta = "#6c71c4"
+red = "#cb4b16"
+white = "#002b36"
+yellow = "#839496"
+
+[colors.cursor]
+cursor = "#586e75"
+text = "#fdf6e3"
+
+[colors.normal]
+black = "#eee8d5"
+blue = "#268bd2"
+cyan = "#2aa198"
+green = "#859900"
+magenta = "#d33682"
+red = "#dc322f"
+white = "#073642"
+yellow = "#b58900"
+
+[colors.primary]
+background = "#fdf5e3"
+bright_foreground = "#073642"
+foreground = "#506879"
+
