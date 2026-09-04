@@ -13,7 +13,10 @@
 set nocompatible
 
 " enable/disable line wrapping; wrap/nowrap
-set nowrap
+set wrap
+
+" wrap whole word gracefully
+set linebreak
 
 " The encoding displayed.
 set encoding=utf-8
@@ -105,8 +108,8 @@ set shiftwidth=2
 set expandtab
 retab!
 
-" Always show at least one line after the position of the cursor
-set scrolloff=3
+" Always show at least two line after the position of the cursor
+set scrolloff=2
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
@@ -133,46 +136,14 @@ set nobackup
 set noswapfile
 
 " Enable auto completion menu after pressing TAB.
-set wildmenu
+"" set wildmenu
 
 " Make wildmenu behave like similar to Bash completion.
-set wildmode=full:list
+"" set wildmode=full:list
 
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+"" set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " End of Experimental Stuff
-
-" plugins with vim plug
-call plug#begin('~/.vim/plugged')
-
-Plug 'itchyny/lightline.vim'              " light line
-Plug 'neovimhaskell/haskell-vim'
-" add more plugins here in the same format `Plug [link]`
-
-call plug#end()
-
-" as light line is installed as plugin
-" showing mode at the bottom is not necessary anymore
-set noshowmode
-
-" required by lightline
-function! DateTime()
-  return strftime("%a %b %d | %H:%M")
-endfunction
-
-let g:lightline = {
-      \ 'colorscheme': 'darcula',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified' ] ],
-      \   'right': [ [ 'datetime' ],
-      \              [ 'percent', 'lineinfo' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ]]
-      \ },
-      \ 'component_function': {
-      \   'datetime': 'DateTime',
-      \ },
-      \}
 

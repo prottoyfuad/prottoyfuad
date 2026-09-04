@@ -1,0 +1,19 @@
+# Ignore everything in the repository
+*
+
+# Prevent Git from ignoring subdirectories
+# !*/
+
+# Explicitly allow the files or extensions you want to track
+!.gitignore
+!README.md
+!LICENSE
+!.bashrc
+!.vimrc
+
+!.config/
+!.config/alacritty/
+!.config/alacritty/**
+!.config/alacritty/color_schemes/**
+!.config/qtile/
+!.config/qtile/**

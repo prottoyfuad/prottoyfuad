@@ -1,30 +1,44 @@
+[general]
+import = [
+  ## Color Schemes
+  # "./color_schemes/solarized_light.toml",
+  # "./color_schemes/everforest_light.toml",
+  # "./color_schemes/kanagawa_lotus.toml",
+  "./color_schemes/kanagawa.toml",
+  # "./color_schemes/dracula.toml",
+  # "./color_schemes/rose_pine_moon.toml",
+  # "./color_schemes/tokyo_night_storm.toml",
+  # "./color_schemes/catppuccin_mocha.toml",
+]
 
 [env]
 TERM = "alacritty"
 
 [font]
 builtin_box_drawing = true
-size = 16
+size = 20
 
 [font.normal]
-family = "monospace"
+family = "Inconsolata Nerd Font"
 style = "Regular"
+
+# Sharpens rendering for larger font sizes
+[font.glyph_offset]
+x = 0
+y = 0
 
 [scrolling]
 history = 10000
 multiplier = 3
 
 [window]
-decorations = "none"
-dynamic_title = true
-# gtk_theme_variant = "dark"
-opacity = 0.95
 startup_mode = "Maximized"
 title = "Alacritty"
-
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
+decorations = "none"
+dynamic_title = true
+opacity = 0.95
+# Blur keeps text readable over transparent windows
+blur = true
 
 [window.padding]
 x = 0
@@ -34,64 +48,9 @@ y = 0
 blinking = "Off"
 shape = "Underline"
 
-[colors.bright]
-black = "#6272a4"
-blue = "#d6acff"
-cyan = "#a4ffff"
-green = "#69ff94"
-magenta = "#ff92df"
-red = "#ff6e6e"
-white = "#ffffff"
-yellow = "#ffffa5"
-
-[colors.cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
-[colors.footer_bar]
-background = "#282a36"
-foreground = "#f8f8f2"
-
-[colors.hints.end]
-background = "#282a36"
-foreground = "#f1fa8c"
-
-[colors.hints.start]
-background = "#f1fa8c"
-foreground = "#282a36"
-
-[colors.line_indicator]
-background = "None"
-foreground = "None"
-
-[colors.normal]
-black = "#21222c"
-blue = "#bd93f9"
-cyan = "#8be9fd"
-green = "#50fa7b"
-magenta = "#ff79c6"
-red = "#ff5555"
-white = "#f8f8f2"
-yellow = "#f1fa8c"
-
-[colors.primary]
-background = "#282a36"
-bright_foreground = "#ffffff"
-foreground = "#f8f8f2"
-
-[colors.search.focused_match]
-background = "#ffb86c"
-foreground = "#44475a"
-
-[colors.search.matches]
-background = "#50fa7b"
-foreground = "#44475a"
-
-[colors.selection]
-background = "#44475a"
-text = "CellForeground"
-
-[colors.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
+# Updated to modern action syntax
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b\r"
 
