@@ -16,7 +16,7 @@ alias grep='grep --color=auto'
 alias cam='systemctl --user restart pipewire wireplumber && GSK_RENDERER=gl snapshot'
 
 ## Promt definition
-PS1='\n[\u@\h:\w]\$ '
+PS1='\n\u@\h: \w\$ '
 
 ## Attach ble.sh and config keybindings
 if [[ ${BLE_VERSION-} ]]; then

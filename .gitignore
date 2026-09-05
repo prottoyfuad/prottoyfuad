@@ -15,5 +15,8 @@
 !.config/alacritty/
 !.config/alacritty/**
 !.config/alacritty/color_schemes/**
+!.config/nvim/
+!.config/nvim/**
 !.config/qtile/
 !.config/qtile/**
+
