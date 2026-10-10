@@ -1,22 +1,23 @@
 # Ignore everything in the repository
 *
 
-# Prevent Git from ignoring subdirectories
-# !*/
+# Allow Directories
+!.config/
+!.config/alacritty/
+!.config/nvim/
+!.config/nvim/lua/
+!.config/qtile/
 
-# Explicitly allow the files or extensions you want to track
+# Allow files
 !.gitignore
 !README.md
 !LICENSE
 !.bashrc
 !.vimrc
 
-!.config/
-!.config/alacritty/
+# Allow all inside directory
 !.config/alacritty/**
-!.config/alacritty/color_schemes/**
-!.config/nvim/
-!.config/nvim/**
-!.config/qtile/
+!.config/nvim/init.lua
+!.config/nvim/lua/**
 !.config/qtile/**
 

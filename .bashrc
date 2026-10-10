@@ -13,6 +13,7 @@
 ## Aliases
 alias ls='ls -alh --color=auto'
 alias grep='grep --color=auto'
+alias vi='nvim'
 alias cam='systemctl --user restart pipewire wireplumber && GSK_RENDERER=gl snapshot'
 
 ## Promt definition
