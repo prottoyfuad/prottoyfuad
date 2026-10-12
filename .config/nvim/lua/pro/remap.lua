@@ -3,7 +3,6 @@
 -- loading lazy.nvim so that mappings are correct
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.keymap.set("n", "<leader>xx", vim.cmd.Ex)
 
 -- Theme
 -- vim.o.background = 'dark'
@@ -35,8 +34,9 @@ vim.o.backup = false
 vim.o.swapfile = false
 
 -- Keymaps (Equivalent to 'nmap' and 'inoremap')
--- Disable annoying Ex mode
+-- Remap Ex mode to keymap
 vim.keymap.set('n', 'Q', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>xx", vim.cmd.Ex)
 
 -- Prevent bad movement habits (Normal Mode)
 vim.keymap.set('n', '<Left>',  ':echoe "Use h"<CR>', { noremap = true })

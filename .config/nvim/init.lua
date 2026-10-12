@@ -1,2 +1,2 @@
 require("pro")
-print("hello")
+

@@ -14,10 +14,13 @@
 alias ls='ls -alh --color=auto'
 alias grep='grep --color=auto'
 alias vi='nvim'
+alias nv='nvim'
 alias cam='systemctl --user restart pipewire wireplumber && GSK_RENDERER=gl snapshot'
 
 ## Promt definition
 PS1='\n\u@\h: \w\$ '
+
+export PATH="$HOME/.scripts:$PATH"
 
 ## Attach ble.sh and config keybindings
 if [[ ${BLE_VERSION-} ]]; then
