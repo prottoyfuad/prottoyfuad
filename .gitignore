@@ -7,6 +7,7 @@
 !.config/nvim/
 !.config/nvim/lua/
 !.config/qtile/
+!.config/waybar/
 
 # Allow files
 !.gitignore
@@ -20,4 +21,5 @@
 !.config/nvim/init.lua
 !.config/nvim/lua/**
 !.config/qtile/**
+!.config/waybar/**
 
